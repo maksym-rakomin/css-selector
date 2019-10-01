@@ -8,12 +8,13 @@ body {
     color: #f5efe7;
     font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;
     border: 10px solid #fff;
+    min-height: 100vh;
 }
 .container {
     max-width: 800px;
     width: 99%;
     margin: 0 auto;
-    padding: 40px 0;
+    /* padding: 40px 0; */
 }
 
 header {
@@ -35,13 +36,24 @@ li, ul {
     padding: 0;
     margin: 0;
 }
-
+main {
+    margin: 70px 0;
+}
 .list label {
     display: block;
     padding: 15px 15px;
 }
+.list li {
+    transition: all .3s ease-in;
+}
+.list input {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
 label span {
     font-size: 26px;
+    vertical-align: middle;
 }
 span.littleText {
     font-size: 14px;
@@ -58,15 +70,19 @@ span.littleText::before {
 }
 .list li:nth-child(odd) {
     background: #88839e;
+    border-top: 3px solid #88839e;
+    border-bottom: 3px solid #88839e;
 }
 .list li:nth-child(even) {
     background: #7a7593;
+    border-top: 3px solid #7a7593;
+    border-bottom: 3px solid #7a7593;
 }
-.list label:hover {
+.list /*label:hover*/ li:hover {
     border-top: 3px solid #ffffff;
     border-bottom: 3px solid #ffffff;
     background: #625e77;
-    padding: 12px 15px;
+    /* padding: 15px; */
     transition: all .3s ease-in;
 }
 input[type=checkbox]:checked ~ span,
@@ -84,7 +100,7 @@ button {
     font-size: 22px;
     color: #eb7e7f;
     background: #4a4f56;
-    margin: 50px 0;
+    margin-bottom: 20px;
     padding: 20px;
     border: none;
 }
